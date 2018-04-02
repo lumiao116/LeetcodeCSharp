@@ -9,6 +9,7 @@ namespace LeetCode
         #region 5. 最长回文子串
         public static string LongestPalindrome(string s)
         {
+            return null;
         }
 
         public static bool isPalindrome(string s,int i,int j)
@@ -74,31 +75,6 @@ namespace LeetCode
             return solution[amount] > amount ? -1 : solution[amount];
         }
         #endregion
-
-        #region 64. 最小路径和
-        public static int MinPathSum(int[,] grid)
-        {
-            int row = grid.GetLength(0);
-            int col = grid.GetLength(1);
-            int[,] minsum = new int[row , col];
-
-            minsum[0, 0] = grid[0, 0];
-
-            for(int i=1;i<row;i++)
-                minsum[i, 0] = minsum[i - 1, 0] + grid[i, 0];
-
-            for (int i = 1; i < col; i++)
-                minsum[0, i] = minsum[0, i-1] + grid[0, i];
-
-
-            for (int i=1;i<row;i++)
-            {
-                for(int j=1;j<col;j++)
-                    minsum[i, j] = Math.Min(minsum[i - 1, j], minsum[i, j - 1]) + grid[i, j];
-            }
-
-            return minsum[row - 1, col - 1];
-        }
-        #endregion
+       
     }
 }

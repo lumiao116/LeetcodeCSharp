@@ -14,3 +14,4 @@ D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.dll
 D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.pdb
 D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.dll
 D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.pdb
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.csprojResolveAssemblyReference.cache
