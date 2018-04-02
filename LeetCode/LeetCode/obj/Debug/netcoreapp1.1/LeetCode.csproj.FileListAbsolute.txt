@@ -6,3 +6,11 @@ D:\pro1\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.pdb
 D:\pro1\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.AssemblyInfo.cs
 D:\pro1\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.dll
 D:\pro1\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.pdb
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.deps.json
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.runtimeconfig.json
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.runtimeconfig.dev.json
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.AssemblyInfo.cs
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.dll
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\obj\Debug\netcoreapp1.1\LeetCode.pdb
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.dll
+D:\play\LeetcodeCSharp\LeetCode\LeetCode\bin\Debug\netcoreapp1.1\LeetCode.pdb

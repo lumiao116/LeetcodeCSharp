@@ -7,15 +7,10 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            int[] coins = new int[1] { 2 };
-            int amount = 3;
-            Stopwatch watch = new Stopwatch();
-            watch.Start();
-            int solution = LeetCode_Dynamic_Easy.CoinChange(coins, amount);
-            watch.Stop();
-            Console.WriteLine(solution);
-            Console.WriteLine("time: " + (watch.ElapsedMilliseconds));
-            Console.ReadKey();
+            int[,] Arr = new int[2, 3] { { 1, 2, 5 }, { 3, 2, 1 } };
+            int s = LeetCode_Dynamic_Medium.MinPathSum(Arr);
+            Console.WriteLine(s);
+            Console.Read();
         }
     }
 }

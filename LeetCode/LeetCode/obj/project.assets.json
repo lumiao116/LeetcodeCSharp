@@ -7042,10 +7042,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\pro1\\LeetCode\\LeetCode\\LeetCode.csproj",
+      "projectUniqueName": "D:\\play\\LeetcodeCSharp\\LeetCode\\LeetCode\\LeetCode.csproj",
       "projectName": "LeetCode",
-      "projectPath": "D:\\pro1\\LeetCode\\LeetCode\\LeetCode.csproj",
-      "outputPath": "D:\\pro1\\LeetCode\\LeetCode\\obj\\",
+      "projectPath": "D:\\play\\LeetcodeCSharp\\LeetCode\\LeetCode\\LeetCode.csproj",
+      "outputPath": "D:\\play\\LeetcodeCSharp\\LeetCode\\LeetCode\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

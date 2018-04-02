@@ -91,31 +91,7 @@ namespace LeetCode
             }
             return Math.Max(solution[nums.Length - 1], solution[nums.Length - 2]);
         }
-        #endregion
-
-        #region 322.零钱兑换
-        public static int CoinChange(int[] coins, int amount)
-        {
-            if (coins.Length < 1 || amount < 0) return -1;
-
-            int[] solution = new int[amount + 1];
-            solution[0] = 0;
-            Array.Sort(coins);
-
-            for(int money=1;money<=amount;money++)
-            {
-                solution[money] = amount + 1;
-                for(int index=0;index<coins.Length;index++)
-                {
-                    if (money >= coins[index])
-                    {
-                        solution[money] = Math.Min(solution[money],solution[money - coins[index]] + 1);
-                    }
-                }
-            }
-            return solution[amount] > amount ? -1 : solution[amount];
-        }
-        #endregion
+        #endregion        
 
         #region 746. 使用最小花费爬楼梯
         public int MinCostClimbingStairs(int[] cost)
