@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LeetCode
+namespace Leetcode
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int[,] Arr = new int[2, 3] { { 1, 2, 5 }, { 3, 2, 1 } };
-            int s = LeetCode_Dynamic_Medium.MinPathSum(Arr);
-            Console.WriteLine(s);
-            Console.Read();
         }
     }
 }
