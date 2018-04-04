@@ -19,8 +19,8 @@ namespace Leetcode
             //}
             //gettime.Stop();
             //Console.WriteLine(gettime.ElapsedMilliseconds.ToString());
-            int[] num = new int[0] { };
-            int[] num2 = new int[1] { 1 };
+            int[] num = new int[1] { 1};
+            int[] num2 = new int[2] { 1 ,1};
             LeetCode_HashTable_Easy.Intersection(num,num2);
                
             Console.ReadKey();

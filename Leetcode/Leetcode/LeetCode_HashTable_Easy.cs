@@ -38,16 +38,22 @@ namespace Leetcode
                 return new int[0];
 
             HashSet<int> hst1 = new HashSet<int>(nums1);
-            HashSet<int> hst2 = new HashSet<int>(nums2);
-            int[] res = new int[Math.Max(nums1.Length, nums2.Length)];
+            HashSet<int> hst2 = new HashSet<int>();
 
-            foreach(int item in hst1)
+            for(int i=0;i<nums2.Length;i++)
             {
-                if(hst2.Contains(item))
+                if(hst1.Contains(nums2[i]))
                 {
-
+                    hst2.Add(nums2[i]);
                 }
             }
+            int[] res = new int[hst2.Count];
+            int index = 0;
+            foreach(int item in hst2)
+            {
+                res[index++] = item;
+            }
+            return res;
         }
         #endregion
     }
