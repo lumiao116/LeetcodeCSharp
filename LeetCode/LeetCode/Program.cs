@@ -21,7 +21,15 @@ namespace Leetcode
             //Console.WriteLine(gettime.ElapsedMilliseconds.ToString());
             int[] num = new int[1] { 1};
             int[] num2 = new int[2] { 1 ,1};
-            LeetCode_HashTable_Easy.Intersection(num,num2);
+
+            string s = "bhdbshg";
+            //stp.Start();
+            //string res = LeetCode_String_Medium.StringSort(s);
+            string[] strs = new string[2] { "", ""};
+            LeetCode_String_Medium.GroupAnagrams(strs);
+            //Console.WriteLine(res);
+            //stp.Stop();
+            //Console.WriteLine(stp.ElapsedMilliseconds.ToString());
                
             Console.ReadKey();
         }

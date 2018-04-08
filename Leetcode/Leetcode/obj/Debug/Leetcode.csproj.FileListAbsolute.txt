@@ -4,4 +4,3 @@ D:\entertainment\LeetcodeCSharp\Leetcode\Leetcode\bin\Debug\Leetcode.exe
 D:\entertainment\LeetcodeCSharp\Leetcode\Leetcode\bin\Debug\Leetcode.pdb
 D:\entertainment\LeetcodeCSharp\Leetcode\Leetcode\obj\Debug\Leetcode.exe
 D:\entertainment\LeetcodeCSharp\Leetcode\Leetcode\obj\Debug\Leetcode.pdb
-D:\entertainment\LeetcodeCSharp\Leetcode\Leetcode\obj\Debug\Leetcode.csprojResolveAssemblyReference.cache

@@ -260,8 +260,58 @@ namespace Leetcode
         }
         #endregion
 
+        #region 680. 验证回文字符串 Ⅱ
 
+        public static bool ValidPalindrome(string s)
+        {
+            int i = 0;
+            int j = s.Length - 1;
 
-        public static object Dictionary { get; set; }
+            while(i<j)
+            {
+                if(s[i]==s[j])
+                {
+                    i++;
+                    j--;
+                }
+                else
+                {
+                    if (s[i + 1] != s[j] && s[i] != s[j - 1])
+                        return false;
+                    else
+                        return IsPalindrome(s, i + 1, j) || IsPalindrome(s, i, j - 1);                  
+                }
+            }
+            return true;
+        }
+        public static bool ValidPalindrome_BeyondTime(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+                return false;
+
+            string tmp = "";
+            for(int i=0;i<s.Length;i++)
+            {
+                tmp = s.Remove(i, 1);
+                if(IsPalindrome(tmp,0,tmp.Length-1))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool IsPalindrome(string s,int left,int right)
+        {
+            int start = left;
+            int end = right;
+            while(start<end)
+            {
+                if (s[start++] != s[end--])
+                    return false;
+            }
+            return true;
+        }
+        #endregion
+
     }
 }

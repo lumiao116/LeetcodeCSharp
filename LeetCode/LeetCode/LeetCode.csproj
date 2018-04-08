@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HashSet.cs" />
     <Compile Include="LeetCode_Array_Easy.cs" />
     <Compile Include="LeetCode_Dynamic_Easy.cs" />
     <Compile Include="LeetCode_Dynamic_Medium.cs" />
     <Compile Include="LeetCode_HashTable_Easy.cs" />
     <Compile Include="LeetCode_String_Easy.cs" />
+    <Compile Include="LeetCode_String_Medium.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
