@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
-    class LeetCode_HashTable_Easy
+    class HashTable_Easy
     {
         #region 217. 存在重复
         public static bool ContainsDuplicate(int[] nums)

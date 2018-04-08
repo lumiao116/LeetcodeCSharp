@@ -22,14 +22,14 @@ namespace Leetcode
             int[] num = new int[1] { 1};
             int[] num2 = new int[2] { 1 ,1};
 
-            string s = "bhdbshg";
+            string s = "PPALLP";
             //stp.Start();
             //string res = LeetCode_String_Medium.StringSort(s);
-            string[] strs = new string[2] { "", ""};
-            LeetCode_String_Medium.GroupAnagrams(strs);
+            //string[] strs = new string[2] { "", ""};
+            bool bo=String_Medium.CheckRecord(s);
             //Console.WriteLine(res);
             //stp.Stop();
-            //Console.WriteLine(stp.ElapsedMilliseconds.ToString());
+            Console.WriteLine(bo);
                
             Console.ReadKey();
         }

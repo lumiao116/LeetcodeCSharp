@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LeetCode_Array_Easy.cs" />
-    <Compile Include="LeetCode_Dynamic_Easy.cs" />
-    <Compile Include="LeetCode_Dynamic_Medium.cs" />
-    <Compile Include="LeetCode_HashTable_Easy.cs" />
-    <Compile Include="LeetCode_String_Easy.cs" />
-    <Compile Include="LeetCode_String_Medium.cs" />
+    <Compile Include="Array_Easy.cs" />
+    <Compile Include="Array_Medium.cs" />
+    <Compile Include="Dynamic_Easy.cs" />
+    <Compile Include="Dynamic_Medium.cs" />
+    <Compile Include="HashTable_Easy.cs" />
+    <Compile Include="HashTable_Medium.cs" />
+    <Compile Include="String_Easy.cs" />
+    <Compile Include="String_Medium.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

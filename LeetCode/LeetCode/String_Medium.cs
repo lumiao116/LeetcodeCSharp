@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
-    class LeetCode_String_Medium
+    class String_Medium
     {
         
         #region 22. 括号生成
@@ -40,34 +40,65 @@ namespace Leetcode
                 return;
             }
         }
+        #endregion       
+
+        #region 392. 判断子序列
+        public bool IsSubsequence(string s, string t)
+        {
+            if (t.Length < s.Length)
+                return false;
+
+            int len = s.Length;
+            int prev = 0;
+
+            for (int i = 0; i < len; i++)
+            {
+                char tmpchar = s[i];
+                prev = t.IndexOf(tmpchar,prev);
+                if (prev == -1)
+                    return false;
+
+                prev++;
+            }
+            return true;
+        }
         #endregion
 
-        #region 49. 字谜分组
-        public static IList<IList<string>> GroupAnagrams(string[] strs)
+        #region 551. 学生出勤纪录 I
+        public static bool CheckRecord(string s)
         {
-            IList<IList<string>> res = new List<IList<string>>();
-            Hashtable hst = new Hashtable();
-            foreach (string str in strs)
-            {
-                hst.Add(str, StringSort(str));
-            }
+            if (string.IsNullOrEmpty(s))
+                return false;
 
+            int countA = 0;
+            int countB = 0;
+
+            for(int i=0;i<s.Length;i++)
+            {
+                if(s[i]=='A')
+                {
+                    countB = 0;
+                    countA++;
+                    {
+                        if (countA > 1)
+                            return false;
+                    }
+                }
+                else if(s[i]=='L')
+                {
+                    countB++;
+                    if (countB > 2)
+                        return false;
+                }
+                else
+                {
+                    countB = 0;
+                }
+            }
+            return true;
             
-            return res;
         }
         #endregion
-
-        public static string StringSort(string str)
-        {
-            List<char> strList = new List<char>(str);
-            strList.Sort();
-            string res = "";
-            foreach(char ch in strList)
-            {
-                res += ch;
-            }
-            return res;
-        }
 
         #region 647. 回文子串
         public static int CountSubstrings(string s)

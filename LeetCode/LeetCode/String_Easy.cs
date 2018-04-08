@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Leetcode
 {
-    class LeetCode_String_Easy
+    class String_Easy
     {
         #region 38. 数数并说
         public static string CountAndSay(int n)
