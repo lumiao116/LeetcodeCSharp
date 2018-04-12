@@ -8,7 +8,7 @@ namespace Leetcode
 {
     class leetcode_1to20
     {
-        #region 1.两数之和manx
+        #region 1.两数之和
         /// <summary>
         /// 给定一个整数数列，找出其中和为特定值的那两个数。你可以假设每个输入都只会有一种答案，同样的元素不能被重用。
         /// tags:Array,HashTable
@@ -20,22 +20,22 @@ namespace Leetcode
         /// <returns></returns>
         public static int[] TwoSum(int[] nums, int target)
         {
-            if(nums.Length<2)
+            if (nums.Length < 2)
             {
                 return nums;
             }
             int[] res = new int[2];
             Dictionary<int, int> dic = new Dictionary<int, int>();
 
-            for (int i = 0; i < nums.Length;i++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if(dic.ContainsKey(target-nums[i]))
+                if (dic.ContainsKey(target - nums[i]))
                 {
                     res[1] = i;
                     res[0] = dic[target - nums[i]];
                     break;
                 }
-                if(!dic.ContainsKey(nums[i]))
+                if (!dic.ContainsKey(nums[i]))
                 {
                     dic.Add(nums[i], i);
                 }
@@ -52,7 +52,7 @@ namespace Leetcode
         /// 给定 "pwwkew" ，最长子串是 "wke" ，长度是3。请注意答案必须是一个子串，"pwke" 是 子序列 而不是子串。
         /*tags*/
         /// HashTable,String,DoublePointer  
-        
+
         /// <summary>
         /// 思路1:哈希表+动态规划：用哈希表存放当前字符前一次出现的索引
         /// 状态转移：
@@ -74,22 +74,22 @@ namespace Leetcode
             int[] res = new int[s.Length];
             res[0] = 1;
 
-            for(int i=1;i<s.Length;i++)
+            for (int i = 1; i < s.Length; i++)
             {
-                if(!dic.ContainsKey(s[i]))
+                if (!dic.ContainsKey(s[i]))
                 {
                     dic.Add(s[i], i);
                     res[i] = res[i - 1] + 1;
                 }
                 else
                 {
-                    int pre = Math.Max(i-1-res[i-1], dic[s[i]]);
+                    int pre = Math.Max(i - 1 - res[i - 1], dic[s[i]]);
                     res[i] = i - pre;
                     dic[s[i]] = i;
                 }
             }
             int maxLen = res[0];
-            for(int i=0;i<res.Length;i++)
+            for (int i = 0; i < res.Length; i++)
             {
                 maxLen = Math.Max(maxLen, res[i]);
             }
@@ -117,6 +117,68 @@ namespace Leetcode
                 hash[s[i]] = i;
             }
             return max;
+        }
+        #endregion
+
+        #region 4.两个排序数组的中位数
+        /*题目描述*/
+        //有两个大小为 m 和 n 的排序数组 nums1 和 nums2，请找出两个排序数组的中位数并且总的运行时间复杂度为 O(log (m+n)) 。
+        /*tags*/
+        //数组，二分查找，分治算法
+        /// <summary>
+        /// 思路1
+        /// 遍历合并数组，两个指针跟踪两个数组
+        /// left指向第一个数组，right指向第二个数组
+        /// 遍历两个数组，先放小，后放大，相等同时存入list
+        /// list个数为奇数，取中间值
+        /// list个数为偶数，取中间两数的平均值
+        /// </summary>
+        /// <returns>The median sorted arrays.</returns>
+        /// <param name="nums1">Nums1.</param>
+        /// <param name="nums2">Nums2.</param>
+        public static double FindMedianSortedArrays(int[] nums1, int[] nums2)
+        {
+            List<int> help = new List<int>();
+            int left = 0;
+            int right = 0;
+            while (left < nums1.Length && right < nums2.Length)
+            {
+                if (left < nums1.Length && right < nums2.Length)
+                {
+                    if (nums1[left] < nums2[right])
+                    {
+                        help.Add(nums1[left++]);
+                    }
+                    else if (nums1[left] > nums2[right])
+                    {
+                        help.Add(nums2[right++]);
+                    }
+                    else
+                    {
+                        help.Add(nums1[left++]);
+                        help.Add(nums2[right++]);
+                    }
+                }
+            }
+
+            while (left < nums1.Length)
+            {
+                help.Add(nums1[left++]);
+            }
+
+            while (right < nums2.Length)
+            {
+                help.Add(nums2[right++]);
+            }
+            int len = help.Count()-1;
+            if((len+1) % 2 != 0)
+            {
+                return (double)help[len/2];
+            }
+            else
+            {
+                return (double)(help[len/2]+help[len/2+1])/2;
+            }
         }
         #endregion
     }

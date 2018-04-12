@@ -18,12 +18,13 @@ namespace Leetcode
             //    Console.WriteLine(LeetCode_String_Easy.CountAndSay(i));
             //}
             //gettime.Stop();
-            //Console.WriteLine(gettime.ElapsedMilliseconds.ToString());
-            int[] num = new int[1] { 1};
-            int[] num2 = new int[8] { 3, 3, 4 ,5,6,7,8,9};
+            //Console.WriteLine(gettime.ElapsedMilliseconds.ToString()); 
+            var leet = new leetcode_1to20();
+            int[] num = new int[22] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22};
+            int[] num2 = new int[2] {0,6};
 
-            string s = "abba";
-            int flowered = leetcode_1to20.LengthOfLongestSubstring2(s);
+            //string s = "abba";
+            double flowered = leetcode_1to20.FindMedianSortedArrays(num,num2);
                 //stp.Start();
                 //string res = LeetCode_String_Medium.StringSort(s);
                 //string[] strs = new string[2] { "", ""};
