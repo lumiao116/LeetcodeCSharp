@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
-    class leetcode_1to20
+    class leetcodeFROM1TO20
     {
         #region 1.两数之和
         /// <summary>
