@@ -10,7 +10,7 @@ namespace Leetcode
     {
         #region 49. 字谜分组
         public static IList<IList<string>> GroupAnagrams(string[] strs)
-        {
+         {
             IList<IList<string>> res = new List<IList<string>>();
             Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
 
@@ -37,8 +37,6 @@ namespace Leetcode
 
             return res;
         }
-
-
         public static string StringSort(string str)
         {
             List<char> strList = new List<char>(str);

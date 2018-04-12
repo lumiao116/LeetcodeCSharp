@@ -66,6 +66,29 @@ namespace LeetCode
         }
         #endregion
 
+        #region 605.种花问题
+        public bool CanPlaceFlowers(int[] flowerbed, int n)
+        {
+            for (int i = 0; i < flowerbed.Length - 1; i++)
+            {
+                if (n == 0) return true;
+                if(flowerbed[i]==0)
+                {
+                    int next = (i == flowerbed.Length - 1) ? 0 : flowerbed[i + 1];
+                    int pre = (i == 0) ? 0 : flowerbed[i - 1];
+
+                    if (next + pre == 0)
+                    {
+                        n--;
+                        i++;
+                    }
+                        
+                }
+            }
+            return n <= 0;
+        }
+        #endregion
+
         #region 747.至少是其他数字两倍的最大数
         public int DominantIndex(int[] nums)
         {
@@ -106,6 +129,5 @@ namespace LeetCode
             return true;
         }
         #endregion
-
     }
 } 

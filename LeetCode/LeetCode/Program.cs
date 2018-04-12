@@ -20,16 +20,17 @@ namespace Leetcode
             //gettime.Stop();
             //Console.WriteLine(gettime.ElapsedMilliseconds.ToString());
             int[] num = new int[1] { 1};
-            int[] num2 = new int[2] { 1 ,1};
+            int[] num2 = new int[8] { 3, 3, 4 ,5,6,7,8,9};
 
-            string s = "PPALLP";
-            //stp.Start();
-            //string res = LeetCode_String_Medium.StringSort(s);
-            //string[] strs = new string[2] { "", ""};
-            bool bo=String_Medium.CheckRecord(s);
-            //Console.WriteLine(res);
+            string s = "abba";
+            int flowered = leetcode_1to20.LengthOfLongestSubstring2(s);
+                //stp.Start();
+                //string res = LeetCode_String_Medium.StringSort(s);
+                //string[] strs = new string[2] { "", ""};
+                //bool bo=Array_Easy
+             Console.WriteLine(flowered);
             //stp.Stop();
-            Console.WriteLine(bo);
+            //Console.WriteLine(bo);
                
             Console.ReadKey();
         }
