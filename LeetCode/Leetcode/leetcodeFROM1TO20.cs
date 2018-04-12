@@ -170,14 +170,46 @@ namespace Leetcode
             {
                 help.Add(nums2[right++]);
             }
-            int len = help.Count()-1;
-            if((len+1) % 2 != 0)
+            int len = help.Count() - 1;
+            if ((len + 1) % 2 != 0)
             {
-                return (double)help[len/2];
+                return (double)help[len / 2];
             }
             else
             {
-                return (double)(help[len/2]+help[len/2+1])/2;
+                return (double)(help[len / 2] + help[len / 2 + 1]) / 2;
+            }
+        }
+        #endregion
+
+        #region 5.最长回文子串
+        /*问题描述*/
+        //给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 长度最长为1000。
+        //输入babad，输出bab或aba
+        //输入cbbd，输出bb
+        /*tags*/
+        //字符串，动态规划
+        /// <summary>
+        /// 思路：动态规划法，用dp[i][j]存放i-j区间是否为回文序列(回文序列的次子序列肯定也是回文序列)
+        /// dp[i][j]=1,i==j
+        /// dp[i][j]=(str[i]==str[j]),j-i=1
+        /// dp[i][j]=(str[j]&&dp[i+1][j-1]),j-i>1
+        /// </summary>
+        /// <returns>The palindrome.</returns>
+        /// <param name="s">S.</param>
+        public string LongestPalindrome(string s)
+        {
+            int[][] dp = new int[s.Length][];
+            int maxLen = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if(j-i>2)
+                    {
+                        dp[i][j]=
+                    }
+                }
             }
         }
         #endregion
