@@ -1,9 +1,4 @@
 d:/users/miaolu/documents/visual studio 2013/Projects/Leetcode/Leetcode/bin/Debug/Leetcode.exe.config
-D:/entertainment/LeetcodeCSharp/Leetcode/Leetcode/bin/Debug/Leetcode.exe.config
-D:/entertainment/LeetcodeCSharp/Leetcode/Leetcode/bin/Debug/Leetcode.exe
-D:/entertainment/LeetcodeCSharp/Leetcode/Leetcode/bin/Debug/Leetcode.pdb
-D:/entertainment/LeetcodeCSharp/Leetcode/Leetcode/obj/Debug/Leetcode.exe
-D:/entertainment/LeetcodeCSharp/Leetcode/Leetcode/obj/Debug/Leetcode.pdb
 D:/plaaaay/LeetcodeCSharp/LeetCode/Leetcode/bin/Debug/Leetcode.exe.config
 D:/plaaaay/LeetcodeCSharp/LeetCode/Leetcode/bin/Debug/Leetcode.exe
 D:/plaaaay/LeetcodeCSharp/LeetCode/Leetcode/bin/Debug/Leetcode.pdb
@@ -16,3 +11,9 @@ D:/plaaaay/LeetcodeCSharp/LeetCode/Leetcode/obj/Debug/Leetcode.pdb
 /Users/Lumiao/Documents/GitHub/LeetcodeCSharp/LeetCode/LeetCode/obj/Debug/Leetcode.csproj.CoreCompileInputs.cache
 /Users/Lumiao/Documents/GitHub/LeetcodeCSharp/LeetCode/LeetCode/obj/Debug/Leetcode.exe
 /Users/Lumiao/Documents/GitHub/LeetcodeCSharp/LeetCode/LeetCode/obj/Debug/Leetcode.pdb
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\bin\Debug\Leetcode.exe.config
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\bin\Debug\Leetcode.exe
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\bin\Debug\Leetcode.pdb
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\obj\Debug\Leetcode.exe
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\obj\Debug\Leetcode.pdb
+D:\entertainment\LeetcodeCSharp\LeetCode\Leetcode\obj\Debug\Leetcode.csprojResolveAssemblyReference.cache

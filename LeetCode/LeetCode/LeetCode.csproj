@@ -47,7 +47,7 @@
     <Compile Include="Dynamic_Medium.cs" />
     <Compile Include="HashTable_Easy.cs" />
     <Compile Include="HashTable_Medium.cs" />
-    <Compile Include="leetcodeFROM1TO20.cs" />
+    <Compile Include="leetcode1to20.cs" />
     <Compile Include="String_Easy.cs" />
     <Compile Include="String_Medium.cs" />
     <Compile Include="Program.cs" />

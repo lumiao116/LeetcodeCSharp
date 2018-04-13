@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Leetcode
 {
-    class leetcodeFROM1TO20
+    class leetcode1to20
     {
         #region 1.两数之和
         /// <summary>
@@ -191,26 +191,53 @@ namespace Leetcode
         //字符串，动态规划
         /// <summary>
         /// 思路：动态规划法，用dp[i][j]存放i-j区间是否为回文序列(回文序列的次子序列肯定也是回文序列)
-        /// dp[i][j]=1,i==j
-        /// dp[i][j]=(str[i]==str[j]),j-i=1
-        /// dp[i][j]=(str[j]&&dp[i+1][j-1]),j-i>1
+        /// dp[i][j]=s[i]==s[j]&&(j-i<2||dp[dp[start + 1, end - 1]])
         /// </summary>
         /// <returns>The palindrome.</returns>
         /// <param name="s">S.</param>
-        public string LongestPalindrome(string s)
+        public static string LongestPalindrome(string s)
         {
-            int[][] dp = new int[s.Length][];
-            int maxLen = 0;
-            for (int i = 0; i < s.Length; i++)
+            bool[,] dp = new bool[s.Length,s.Length];
+            int left=0;
+            int right=0;
+            int len=0;
+            
+            for(int end=0;end<s.Length;end++)
             {
-                for (int j = 0; j < s.Length; j++)
+                for(int start=0;start<end;start++)
                 {
-                    if(j-i>2)
+                    dp[start, end] = s[start] == s[end] && (end - start < 2 || dp[start + 1, end - 1]);
+                    if(dp[start,end]&&end-start+1>len)
                     {
-                        dp[i][j]=
+                        left=start;
+                        right=end;
+                        len=right-left+1;
                     }
                 }
+                dp[end, end] = true;
             }
+            return s.Substring(left, right - left + 1);
+        }
+        #endregion
+
+        #region 6. Z字形变换
+        /*问题描述*/
+        //将字符串 "PAYPALISHIRING" 以Z字形排列成给定的行数
+        /*P   A   H   N
+          A P L S I I G
+          Y   I   R*/
+        //之后从左往右，逐行读取字符："PAHNAPLSIIGYIR"
+        /*tags*/
+        //字符串
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="numRows"></param>
+        /// <returns></returns>
+        public static string Convert(string s, int numRows)
+        {
+            
         }
         #endregion
     }
