@@ -24,7 +24,7 @@ namespace Leetcode
             int[] num2 = new int[2] {0,6};
 
             string s = "PAYPALISHIRING";
-            string ss = leetcode1to20.Convert(s,3);
+            string ss = leetcode1to20.Convert(s,4);
                 //stp.Start();
                 //string res = LeetCode_String_Medium.StringSort(s);
                 //string[] strs = new string[2] { "", ""};

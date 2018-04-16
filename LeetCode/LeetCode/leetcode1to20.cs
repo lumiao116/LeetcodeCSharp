@@ -187,8 +187,7 @@ namespace Leetcode
         //给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 长度最长为1000。
         //输入babad，输出bab或aba
         //输入cbbd，输出bb
-        /*tags*/
-        //字符串，动态规划
+        //tags:字符串，动态规划
         /// <summary>
         /// 思路：动态规划法，用dp[i][j]存放i-j区间是否为回文序列(回文序列的次子序列肯定也是回文序列)
         /// dp[i][j]=s[i]==s[j]&&(j-i<2||dp[dp[start + 1, end - 1]])
@@ -225,7 +224,7 @@ namespace Leetcode
         //将字符串 "PAYPALISHIRING" 以Z字形排列成给定的行数
         /*P   A   H   N
           A P L S I I G
-          Y   I   R*/
+          Y   I   R
         //之后从左往右，逐行读取字符："PAHNAPLSIIGYIR"
         /*tags*/
         //字符串
@@ -237,7 +236,106 @@ namespace Leetcode
         /// <returns></returns>
         public static string Convert(string s, int numRows)
         {
-            
+            if (numRows <=1)
+                return s;
+
+            StringBuilder res = new StringBuilder();
+            int size = 2 * numRows - 2;
+            for(int i=0;i < numRows ;i++)
+            {
+                for(int j=i;j<s.Length;j+=size)
+                {
+                    res.Append(s[j]);
+                    int tmp = j + size - 2 * i;
+                    if(i!=0&&i!=numRows-1&&tmp<s.Length)
+                    {
+                        res.Append(s[tmp]);
+                    }
+                }
+            }
+
+            return res.ToString();
+        }
+        #endregion
+
+        #region 9. 回文数
+        /*问题描述*/
+        //判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+        //tags：数学
+        /// <summary>
+        /// -121不是回文数,将数字转换为字符串，通过对称性判断
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public bool IsPalindrome(int x)
+        {
+            string tmp = x.ToString();
+            int left = 0;
+            int right = tmp.Length - 1;
+
+            while(left<right)
+            {
+                if(tmp[left++]!=tmp[right--])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        #endregion
+
+        #region 10. 正则表达式匹配
+        /// <summary>
+        /// 给定一个字符串 (s) 和一个字符模式 (p)。实现支持 '.' 和 '*' 的正则表达式匹配。'.' 匹配任意单个字符，'*' 匹配零个或多个前面的元素。
+        /// s="aa",p="a",输出false
+        /// s = "aa",p = "a*",输出true
+        /// s = "ab",p = ".*",输出true
+        /// s = "aab",p = "c*a*b",输出true
+        /// s = "mississippi",p = "mis*is*p*.",输出false
+        /// tags:字符串、动态规划、回溯算法
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public bool IsMatch(string s, string p)
+        {
+            return false;
+        }
+        #endregion
+
+        #region 11. 盛最多水的容器
+        /// <summary>
+        /// 给定 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。画 n 条垂直线，使得垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+        /// 双指针，如果左>右，则右指针左移，否则左指针右移
+        /// </summary>
+        /// <param name="height"></param>
+        /// <returns></returns>
+        public int MaxArea(int[] height)
+        {
+            int left = 0, right = height.Length - 1;
+            int maxArea = Math.Min(height[left],height[right])*Math.Abs(left-right);
+
+            while(left<right)
+            {
+                maxArea = Math.Max(maxArea,Math.Min(height[left], height[right]) * Math.Abs(left - right));
+                if (height[left] > height[right])
+                    right--;
+                else
+                    left++;
+            }
+            return maxArea;
+        }
+        #endregion
+
+        #region 14. 最长公共前缀
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="strs"></param>
+        /// <returns></returns>
+        public string LongestCommonPrefix(string[] strs)
+        {
+            StringBuilder commonStr = new StringBuilder();
         }
         #endregion
     }
