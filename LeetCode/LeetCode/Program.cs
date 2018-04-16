@@ -21,10 +21,10 @@ namespace Leetcode
             //Console.WriteLine(gettime.ElapsedMilliseconds.ToString()); 
             var leet = new leetcode1to20();
             int[] num = new int[22] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22};
-            int[] num2 = new int[2] {0,6};
+            int[] num2 = new int[6] {-1,0,1,2,-1,4};
 
             string[] s = new string[3]{"abcxxx","abcfff","abcggg"};
-            string ss = leetcode1to20.LongestCommonPrefix2(s);
+            IList<IList<int>> ss = leetcode1to20.ThreeSum(num2);
                 //stp.Start();
                 //string res = LeetCode_String_Medium.StringSort(s);
                 //string[] strs = new string[2] { "", ""};

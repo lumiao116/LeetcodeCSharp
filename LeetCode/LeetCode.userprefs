@@ -2,14 +2,19 @@
   <MonoDevelop.Ide.ItemProperties.Leetcode PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LeetCode/leetcode1to20.cs">
     <Files>
-      <File FileName="LeetCode/Program.cs" Line="32" Column="26" />
-      <File FileName="LeetCode/String_Easy.cs" Line="262" Column="9" />
-      <File FileName="LeetCode/leetcode1to20.cs" Line="242" Column="19" />
+      <File FileName="LeetCode/Program.cs" Line="27" Column="1" />
+      <File FileName="LeetCode/String_Easy.cs" Line="155" Column="9" />
+      <File FileName="LeetCode/leetcode1to20.cs" Line="47" Column="2" />
+      <File FileName="LeetCode/Dynamic_Medium.cs" Line="29" Column="10" />
+      <File FileName="LeetCode/HashTable_Easy.cs" Line="12" Column="10" />
+      <File FileName="LeetCode/HashTable_Medium.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/Lumiao/Documents/GitHub/LeetcodeCSharp/LeetCode/LeetCode/Program.cs" relfile="LeetCode/Program.cs" line="27" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />

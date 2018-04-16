@@ -196,21 +196,21 @@ namespace Leetcode
         /// <param name="s">S.</param>
         public static string LongestPalindrome(string s)
         {
-            bool[,] dp = new bool[s.Length,s.Length];
-            int left=0;
-            int right=0;
-            int len=0;
-            
-            for(int end=0;end<s.Length;end++)
+            bool[,] dp = new bool[s.Length, s.Length];
+            int left = 0;
+            int right = 0;
+            int len = 0;
+
+            for (int end = 0; end < s.Length; end++)
             {
-                for(int start=0;start<end;start++)
+                for (int start = 0; start < end; start++)
                 {
                     dp[start, end] = s[start] == s[end] && (end - start < 2 || dp[start + 1, end - 1]);
-                    if(dp[start,end]&&end-start+1>len)
+                    if (dp[start, end] && end - start + 1 > len)
                     {
-                        left=start;
-                        right=end;
-                        len=right-left+1;
+                        left = start;
+                        right = end;
+                        len = right - left + 1;
                     }
                 }
                 dp[end, end] = true;
@@ -236,18 +236,18 @@ namespace Leetcode
         /// <returns></returns>
         public static string Convert(string s, int numRows)
         {
-            if (numRows <=1)
+            if (numRows <= 1)
                 return s;
 
             StringBuilder res = new StringBuilder();
             int size = 2 * numRows - 2;
-            for(int i=0;i < numRows ;i++)
+            for (int i = 0; i < numRows; i++)
             {
-                for(int j=i;j<s.Length;j+=size)
+                for (int j = i; j < s.Length; j += size)
                 {
                     res.Append(s[j]);
                     int tmp = j + size - 2 * i;
-                    if(i!=0&&i!=numRows-1&&tmp<s.Length)
+                    if (i != 0 && i != numRows - 1 && tmp < s.Length)
                     {
                         res.Append(s[tmp]);
                     }
@@ -273,9 +273,9 @@ namespace Leetcode
             int left = 0;
             int right = tmp.Length - 1;
 
-            while(left<right)
+            while (left < right)
             {
-                if(tmp[left++]!=tmp[right--])
+                if (tmp[left++] != tmp[right--])
                 {
                     return false;
                 }
@@ -313,11 +313,11 @@ namespace Leetcode
         public int MaxArea(int[] height)
         {
             int left = 0, right = height.Length - 1;
-            int maxArea = Math.Min(height[left],height[right])*Math.Abs(left-right);
+            int maxArea = Math.Min(height[left], height[right]) * Math.Abs(left - right);
 
-            while(left<right)
+            while (left < right)
             {
-                maxArea = Math.Max(maxArea,Math.Min(height[left], height[right]) * Math.Abs(left - right));
+                maxArea = Math.Max(maxArea, Math.Min(height[left], height[right]) * Math.Abs(left - right));
                 if (height[left] > height[right])
                     right--;
                 else
@@ -335,25 +335,25 @@ namespace Leetcode
         /// <returns></returns>
         public static string LongestCommonPrefix(string[] strs)
         {
-            if(strs==null||strs.Length==0)
+            if (strs == null || strs.Length == 0)
             {
                 return "";
             }
             string maxCommonPrefix = strs[0];
-            for (int i = 1; i < strs.Length ;i++)
+            for (int i = 1; i < strs.Length; i++)
             {
                 maxCommonPrefix = CommPrefix(maxCommonPrefix, strs[i]);
             }
             return maxCommonPrefix;
         }
 
-        private static string CommPrefix(string a,string b)
+        private static string CommPrefix(string a, string b)
         {
             int indexA = 0, indexB = 0;
             StringBuilder tmp = new StringBuilder();
-            while(indexA<a.Length&&indexB<b.Length)
+            while (indexA < a.Length && indexB < b.Length)
             {
-                if(a[indexA]==b[indexB])
+                if (a[indexA] == b[indexB])
                 {
                     tmp.Append(a[indexA]);
                     indexA++;
@@ -381,10 +381,10 @@ namespace Leetcode
 
             StringBuilder maxCommonPrefix = new StringBuilder();
             char ch;
-            for (int i = 0; i < strs[0].Length;i++)
+            for (int i = 0; i < strs[0].Length; i++)
             {
                 ch = strs[0][i];
-                for (int j = 1; j < strs.Length;j++)
+                for (int j = 1; j < strs.Length; j++)
                 {
                     if (strs[j].Length - 1 < i || strs[j][i] != ch)
                         return maxCommonPrefix.ToString();
@@ -392,6 +392,54 @@ namespace Leetcode
                 maxCommonPrefix.Append(ch);
             }
             return maxCommonPrefix.ToString();
+        }
+        #endregion
+
+        #region 15.三数之和
+        /// <summary>
+        /// Threes the sum.给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。
+        /// tags:数组，双指针
+        ///  </summary>
+        /// <returns>The sum.</returns>
+        /// <param name="nums">Nums.</param>
+        public  static IList<IList<int>> ThreeSum(int[] nums)
+        {
+            IList<IList<int>> res = new List<IList<int>>();
+            if (nums.Length < 3)
+            {
+                return res;
+            }
+            Array.Sort(nums);
+            for (int i = 0; i < nums.Length-1;i++)
+            {
+                int low = i + 1;
+                int high = nums.Length - 1;
+                IList<int> tmp = new List<int>();
+                while(low<high)
+                {
+                    int sum = nums[i] + nums[low] + nums[high];
+                    if(sum==0)
+                    {
+                        tmp.Add(nums[i]);
+                        tmp.Add(nums[low]);
+                        tmp.Add(nums[high]);
+                        break;
+                    }
+                    else if(sum>0)
+                    {
+                        high--;
+                    }
+                    else
+                    {
+                        low++;
+                    }
+                }
+                if(tmp.Count()>0)
+                {
+                    res.Add(tmp);
+                }
+            }
+            return res;
         }
         #endregion
     }
