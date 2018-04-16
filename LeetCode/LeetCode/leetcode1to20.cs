@@ -329,13 +329,69 @@ namespace Leetcode
 
         #region 14. 最长公共前缀
         /// <summary>
-        /// 
+        /// 横向比较，每次比较两个字符串的，获得当前最长公共前缀，后面以此前缀为基准，比较并更新结果集
         /// </summary>
         /// <param name="strs"></param>
         /// <returns></returns>
-        public string LongestCommonPrefix(string[] strs)
+        public static string LongestCommonPrefix(string[] strs)
         {
-            StringBuilder commonStr = new StringBuilder();
+            if(strs==null||strs.Length==0)
+            {
+                return "";
+            }
+            string maxCommonPrefix = strs[0];
+            for (int i = 1; i < strs.Length ;i++)
+            {
+                maxCommonPrefix = CommPrefix(maxCommonPrefix, strs[i]);
+            }
+            return maxCommonPrefix;
+        }
+
+        private static string CommPrefix(string a,string b)
+        {
+            int indexA = 0, indexB = 0;
+            StringBuilder tmp = new StringBuilder();
+            while(indexA<a.Length&&indexB<b.Length)
+            {
+                if(a[indexA]==b[indexB])
+                {
+                    tmp.Append(a[indexA]);
+                    indexA++;
+                    indexB++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return tmp.ToString();
+        }
+
+        /// <summary>
+        /// 纵向比较，每次比较每个字符串的第i位，当存在不相等的字符时，返回结果，否则结果集写入一个字符
+        /// </summary>
+        /// <returns>The common prefix.</returns>
+        /// <param name="strs">Strs.</param>
+        public static string LongestCommonPrefix2(string[] strs)
+        {
+            if (strs == null || strs.Length == 0)
+            {
+                return "";
+            }
+
+            StringBuilder maxCommonPrefix = new StringBuilder();
+            char ch;
+            for (int i = 0; i < strs[0].Length;i++)
+            {
+                ch = strs[0][i];
+                for (int j = 1; j < strs.Length;j++)
+                {
+                    if (strs[j].Length - 1 < i || strs[j][i] != ch)
+                        return maxCommonPrefix.ToString();
+                }
+                maxCommonPrefix.Append(ch);
+            }
+            return maxCommonPrefix.ToString();
         }
         #endregion
     }

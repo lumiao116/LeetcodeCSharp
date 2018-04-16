@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{95AE534D-2613-432C-B542-7F4B3FFA9724}|Default">
   <MonoDevelop.Ide.ItemProperties.Leetcode PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LeetCode/String_Easy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LeetCode/leetcode1to20.cs">
     <Files>
-      <File FileName="LeetCode/Program.cs" Line="23" Column="24" />
-      <File FileName="LeetCode/leetcode_1to20.cs" Line="136" Column="10" />
-      <File FileName="LeetCode/String_Easy.cs" Line="5" Column="30" />
+      <File FileName="LeetCode/Program.cs" Line="32" Column="26" />
+      <File FileName="LeetCode/String_Easy.cs" Line="262" Column="9" />
+      <File FileName="LeetCode/leetcode1to20.cs" Line="242" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
